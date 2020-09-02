@@ -15,6 +15,11 @@ class CreateProfesorCursosTable extends Migration
     {
         Schema::create('profesor_cursos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->boolean('estado');
+            $table->bigInteger('profe_id')->unsigned();
+            $table->foreign('profe_id')->references('id')->on('users');
+            $table->bigInteger('curso_id')->unsigned();
+            $table->foreign('curso_id')->references('id')->on('cursos');
             $table->timestamps();
         });
     }

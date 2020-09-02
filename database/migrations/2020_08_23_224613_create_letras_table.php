@@ -15,6 +15,7 @@ class CreateLetrasTable extends Migration
     {
         Schema::create('letras', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('letra')->unique();
             $table->timestamps();
         });
     }
