@@ -22,3 +22,5 @@ Route::post('/register', 'Api\UserController@register');
 Route::post('/login', 'Api\UserController@login');
 Route::get('/logout', 'Api\UserController@logout')->middleware('auth:api');
 Route::apiResource('nota', 'Api\NotaController');
+
+Route::apiResource('periodo', 'Api\PeriodoController');

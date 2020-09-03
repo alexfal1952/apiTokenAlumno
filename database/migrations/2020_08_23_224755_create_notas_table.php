@@ -30,3 +30,5 @@ class CreateNotasTable extends Migration
         Schema::dropIfExists('notas');
     }
 }
+// 2020_08_12_222114
+// 2020_08_23_224755
